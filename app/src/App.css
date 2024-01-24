@@ -1,0 +1,250 @@
+
+/* All over Used Styling*/
+
+:root{
+  --firstColor:#131921;
+  --secondColor:#3b4149;
+  --thirdColor:#232f3e;
+  --lightTextColor : #777777;
+  --lightBGcolor : #e8e8ef;
+}
+.list-style-none{
+  list-style: none;
+}
+.text-decoration-none{
+  text-decoration: none;
+}
+.icon-color{
+  color:var(--secondColor);
+  filter: drop-shadow(3px 5px 2px rgb(0 2 3 / 0.1))
+}
+.gap-15{
+  gap:15px
+}
+.text-bold {
+  font-weight: bold; 
+}
+.text-red{
+  color: red;
+  
+}
+.bglight{
+ background-color: var(--lightBGcolor);
+ border-radius: 8px;
+}
+.list-group-item+.list-group-item.active{
+  background-color: var(--thirdColor);
+  border: none;
+}
+.box-shadow{
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.active{
+  border-bottom: 2px solid white;
+  padding-bottom: 4px ;
+}
+.hover-effect{
+  transition: all 0.3s;
+}
+.hover-effect:hover{
+  transform: scale(1.1);
+}
+.bg-desire{
+  padding-left: 20px;
+ color: white;
+ border-radius: 12px;
+  background-color: var(--thirdColor);
+  border-bottom: 5px solid  var(--lightTextColor);
+  box-shadow: rgba(87, 84, 84, 0.621) 0px 5px 10px;
+}
+
+
+
+/* Navbar styling */
+.navbar-top-strip{
+  background-color:var(--firstColor) ;
+  border-bottom: 2px solid var(--secondColor);
+justify-content: space-between;
+}
+
+.MainLogo{
+  width: 225px;
+  padding-left: 1rem;
+}
+
+.navbar-middle{
+  background-color: var(--firstColor);
+  border-bottom: 2px solid var(--secondColor);
+}
+
+.navbar-bottom {
+  background-color: var(--thirdColor);
+  border-bottom: 2px solid var(--secondColor);
+}
+
+.nav-item.dropdown.text-white::marker{
+  content: none;
+}
+ /* footer styling */
+ .footer{
+  background-color: var(--firstColor);
+  color: white;
+ 
+}
+
+/* refundPage Styling */
+.container-refund {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.heading-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.heading {
+  font-size: 2em;
+  border-bottom: 2px solid #333;
+  padding-bottom: 20px;
+}
+.section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.icon-container {
+  margin-right: 20px;
+  font-size: 2em;
+  color: #333;
+}
+
+.icon {
+  display: block;
+}
+
+.contact-container {
+  margin-top: 40px;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+
+/* page not found styling */
+.pagenotfound{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 65vh;
+  flex-direction: column;
+  
+}
+
+.PNF-title {
+  font-size: 100px;
+  font-weight: 700;
+}
+
+
+.pnf-btn {
+  color: black;
+  border: 1px solid black;
+  text-decoration: none;
+  padding: 10px;
+  margin-top: 10px;
+}
+.pnf-btn:hover {
+  background-color: black;
+  color: white;
+}
+
+
+/* contactus page Styling */
+.contact-us-page{
+  padding: 30px;
+}
+
+.contact-us-container{
+  background-color: var(--lightBGcolor);
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 30px;
+}
+
+/* Login and Singup and forget-password page styling */
+
+.eyeopenclose{
+  margin-top: 12px;
+}
+
+.login-container{
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.signup-card {
+  max-width: 450px; 
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.forgot-password-container{
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.edit-card {
+  max-width: 450px; 
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+/* store styling */
+@media screen and (max-width: 420px) {
+  .img-n{
+    height: 100%;
+    width: 100%;
+  }
+}
+
+/* HomeFooter styling */
+.HomeFooter{
+  background-color: var(--lightBGcolor);
+}
+
+
+
+.similar-products-container {
+  display: flex;
+  overflow-x: auto; 
+}
+
+.similar-product-card {
+  flex: 0 0 auto;
+  margin-right: 15px; 
+  width: 200px;
+}
+
+.similar-product-card img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* admin All orders styling */
+.order-box {
+  margin-bottom: 20px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.order-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.order-details {
+  flex-grow: 1;
+  padding-left: 20px;
+}
