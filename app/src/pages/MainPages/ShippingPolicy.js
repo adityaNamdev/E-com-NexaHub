@@ -12,7 +12,7 @@ const ShippingPolicy = () => {
   return (
     <div className="container my-5">
       <Helmet>
-        <title>NexaHub|shipping Policy</title>
+        <title>NexaHub | Shipping Policy</title>
       </Helmet>
 
       <div className="heading-container">

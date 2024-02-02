@@ -9,7 +9,7 @@ const AllCategoriesPAGE = () => {
   return (
     <div className="container mt-3">
        <Helmet>
-        <title>NexaHub|All categories</title>
+        <title>NexaHub | All categories</title>
       </Helmet>
       <div className="row">
         {categories.map((c) => (

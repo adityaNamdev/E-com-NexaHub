@@ -31,7 +31,7 @@ function SignUp() {
       [name]: value,
     });
 
-    // Reset errors when the user changes the corresponding field
+  
     if (name === 'password') {
       setPasswordError('');
     } else if (name === 'phoneNumber') {
@@ -62,7 +62,7 @@ function SignUp() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Validate password and phone number
+ 
     if (!validatePassword(formData.password) || !validatePhoneNumber(formData.phoneNumber)) {
       return;
     }

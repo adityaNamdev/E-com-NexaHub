@@ -58,7 +58,7 @@ const OurStore = () => {
     setSortBy("price");
     setSortByPrice("");
     setSortByRating(false);
-    getAllProducts(); // Refresh products
+    getAllProducts();
   };
 
   useEffect(() => {
@@ -66,7 +66,7 @@ const OurStore = () => {
     getAllProducts();
   }, []);
 
-  // Filter products based on the selected category
+ 
   const filteredProducts = filterByCategory
     ? products.filter((p) => p.category === filterByCategory)
     : products;
@@ -96,7 +96,7 @@ const OurStore = () => {
       <div className="container">
         <div className="d-flex justify-content-between align-items-center mb-3 bg-desire">
           <div>
-            <label className="me-2">Sort By:</label>
+            <label className="me-2 mb-1">Sort By :</label>
             <select value={sortBy} onChange={handleSortChange}>
               <option value="price">Price</option>
               <option value="rating">Rating</option>
@@ -104,9 +104,9 @@ const OurStore = () => {
 
             {sortBy === "price" && (
               <>
-                <label className="ms-3">Sort By Price:</label>
+                <label className="ms-3 me-2">Sort By Price : </label>
                 <select value={sortByPrice} onChange={(e) => setSortByPrice(e.target.value)}>
-                  <option value="">select the option</option>
+                  <option value="">Select the option</option>
                   <option value="lowToHigh">Low to High</option>
                   <option value="highToLow">High to Low</option>
                 </select>

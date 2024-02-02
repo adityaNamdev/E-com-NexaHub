@@ -8,7 +8,7 @@ const Pagenotfound = () => {
   return (
     <div className="pagenotfound">
       <Helmet>
-        <title>NexaHub|Page Not found</title>
+        <title>NexaHub | Page Not found</title>
       </Helmet>
       <h1 className="PNF-title">404</h1>
       <p>Oops! Page Not Found</p>

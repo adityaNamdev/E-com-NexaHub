@@ -11,7 +11,7 @@ const RefundPolicy = () => {
   return (
     <div className="container-refund my-5">
       <Helmet>
-          <title>NexaHub|Refund Policy</title>
+          <title>NexaHub | Refund Policy</title>
         </Helmet>
       <div className="heading-container">
         <h1 className="heading">Our Refund Policy</h1>

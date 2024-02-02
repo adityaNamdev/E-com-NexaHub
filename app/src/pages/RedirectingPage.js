@@ -25,7 +25,7 @@ const Redirect = ({ path = "login" }) => {
   return (
     <div className="d-flex flex-column justify-content-center align-items-center" style={{ height: "100vh" }}>
         <Helmet>
-        <title>NexaHub|please wait...</title>
+        <title>NexaHub | please wait...</title>
       </Helmet>
       <h2 className="text-center m-0">
         <span>Redirecting in {count} seconds</span>

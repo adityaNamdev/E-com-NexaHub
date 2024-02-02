@@ -83,7 +83,7 @@ const ForgotPassword = () => {
   return (
     <>
       <Helmet>
-        <title>NexaHub|ForgotPassword</title>
+        <title>NexaHub | ForgotPassword</title>
       </Helmet>
       <div className="container mt-3 mb-3">
         {loading && <MiniSpinner />}

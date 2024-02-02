@@ -43,7 +43,7 @@ const Wishlist = () => {
   return (
     <>
  <Helmet>
-        <title>NexaHub |Wishlist</title>
+        <title>NexaHub | Wishlist</title>
       </Helmet>
     
       <h1 className="text-center bg-light p-2 mb-1">

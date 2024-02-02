@@ -6,7 +6,7 @@ const AboutUs = () => {
   return (
     <>
      <Helmet>
-        <title>NexaHub|About Us</title>
+        <title>NexaHub | About Us</title>
       </Helmet>
       <div className="container my-3">
         <h1 className="text-center"> <FaShoppingBag  style={{ marginRight: '0.5rem' }} />About Us - nexaHub</h1>

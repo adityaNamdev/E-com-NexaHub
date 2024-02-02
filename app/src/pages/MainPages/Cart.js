@@ -56,7 +56,6 @@ const CartPage = () => {
     }
   };
 
-  //get payment gateway token
   const getToken = async () => {
     try {
       const { data } = await axios.get("/api/product/braintree/token");
@@ -70,7 +69,8 @@ const CartPage = () => {
     getToken();
   }, [auth?.token]);
 
-  //handle payments
+
+
   const handlePayment = async () => {
     try {
       setLoading(true);
@@ -102,6 +102,13 @@ const CartPage = () => {
               ? "Hello Guest"
               : `Heyy!! ${auth?.token && auth?.user?.name}`}
           </h1>
+          <p className="text-center">
+                {cart?.length
+                  ? `You Have ${cart.length} items in your cart ${
+                      auth?.token ? "" : "please login to checkout !"
+                    }`
+                  : " Your Cart Is Empty"}
+              </p>
         </div>
       </div>
       <div className="row">
@@ -142,8 +149,8 @@ const CartPage = () => {
         <div className="col-md-4">
           <div className="card mb-4 box-shadow">
             <div className="card-body">
-              <h2 className="card-title">Cart Summary</h2>
-              <p>Total | Checkout | Payment</p>
+              <h2 className="card-title text-center">Cart Summary</h2>
+            
               <hr />
               <h4>Total: {totalPrice()}</h4>
               {auth?.user?.address ? (
@@ -177,7 +184,7 @@ const CartPage = () => {
                         })
                       }
                     >
-                      Plase Login to checkout
+                     <p className="text-primary"> Hey!!please Login to checkout</p> 
                     </button>
                     
                   )}
@@ -185,7 +192,7 @@ const CartPage = () => {
                 </div>
               )}
               <div className="mt-2">
-                {!clientToken || !cart?.length ? (
+                {!clientToken  || !auth?.token || !cart?.length ? (
                   ""
                 ) : ( 
                   <>

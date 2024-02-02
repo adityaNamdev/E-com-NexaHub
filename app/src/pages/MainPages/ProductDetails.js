@@ -31,7 +31,6 @@ const ProductDetails = () => {
     }
   };
 
-  // get similar product
   const getSimilarProduct = async (pid, cid) => {
     try {
       const { data } = await axios.get(
@@ -41,6 +40,10 @@ const ProductDetails = () => {
     } catch (error) {
       console.log(error);
     }
+  };
+
+  const handleTopScrollClick = () => {
+    window.scrollTo(0, 0);
   };
 
   return (
@@ -117,6 +120,7 @@ const ProductDetails = () => {
           {relatedProducts?.map((p) => (
             <div key={p._id} className="similar-product-card">
               <Link
+                onClick={handleTopScrollClick}
                 to={`/product/${p.slug}`}
                 className="text-decoration-none text-black"
               >

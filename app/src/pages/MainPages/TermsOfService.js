@@ -7,7 +7,7 @@ const TermsOfService = () => {
   return (
     <div className="container my-3">
       <Helmet>
-        <title>NexHub|Term of Service</title>
+        <title>NexHub | Term of Service</title>
       </Helmet>
 
       <h1 className="text-center my-3">Terms of Service</h1>

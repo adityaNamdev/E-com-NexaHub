@@ -30,7 +30,7 @@ const MyOrder = () => {
   return (
     <div className="container-fluid ">
        <Helmet>
-        <title>NexaHub |MyOrders</title>
+        <title>NexaHub | MyOrders</title>
       </Helmet>
       <div className="row justify-content-center">
       {loading && <MiniSpinner />}

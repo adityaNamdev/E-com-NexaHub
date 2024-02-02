@@ -14,7 +14,7 @@ const PrivacyPolicy = () => {
   return (
     <div className="container my-3">
       <Helmet>
-        <title>NexaHub|Privacy Policy</title>
+        <title>NexaHub | Privacy Policy</title>
       </Helmet>
 
       <h1 className="text-center my-3">Privacy Policy - nexaHub</h1>

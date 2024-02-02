@@ -1,12 +1,16 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import { useAuth } from "../context/auth";
+import { useCart } from "../context/cart";
+import { useWish } from "../context/wishlist";
 import { BsFillHouseFill, BsBox, BsPlusSquare, BsList, BsClipboardCheck } from "react-icons/bs";
 import { FaArrowRight } from 'react-icons/fa';
 import toast from "react-hot-toast";
 
 const AdminNav = () => {
   const [auth, setAuth] = useAuth();
+  const [cart, setCart] = useCart();
+  const [wish, setWish] = useWish();
 
   const handleLogout = () => {
     setAuth({
@@ -15,6 +19,13 @@ const AdminNav = () => {
       token: "",
     });
     localStorage.removeItem("auth");
+
+    setCart([]);
+    localStorage.removeItem("cart");
+
+    setWish([]);
+    localStorage.removeItem("wish");
+
     toast.success("Logout Successfully");
   };
 

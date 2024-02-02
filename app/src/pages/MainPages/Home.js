@@ -3,10 +3,12 @@ import axios from "axios";
 import Slider from "react-slick";
 import { Link, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
-import { FaStar, FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { FaStar, FaChevronLeft, FaChevronRight, FaHeart } from "react-icons/fa";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import HomeBottomFooter from "../../components/HomeBottomFooter";
+import MiniSpinner from '../../components/MiniSpinner';
+
 
 const CustomPrevArrow = (props) => {
 
@@ -40,15 +42,19 @@ const CustomNextArrow = (props) => {
 const Home = () => {
   const navigate = useNavigate();
   const [products, setProducts] = useState([]);
-  const [cart, setCart] = useState([]);
+  const [loading, setLoading] = useState(false);
+ 
 
   useEffect(() => {
     const fetchProducts = async () => {
       try {
+        setLoading(true);
         const { data } = await axios.get("/api/product/all-products");
         setProducts(data.products);
       } catch (error) {
         console.error(error);
+      } finally {
+        setLoading(false);
       }
     };
 
@@ -91,6 +97,8 @@ const Home = () => {
   const handleTopScrollClick = () => {
     window.scrollTo(0, 0);
   };
+  
+
 
   return (
     <>
@@ -124,6 +132,7 @@ const Home = () => {
 
       <div><h4 className="p-3 mt-3">Feautred Collection</h4>
       <div className="container">
+      {loading && <MiniSpinner />}
         <Slider {...settings} className="product-slide p-2 ">
           {products.map((product) => (
             <div key={`${product._id}${product+1}`} className="col-md" onClick={handleTopScrollClick}>
@@ -159,7 +168,9 @@ const Home = () => {
           ))}
         </Slider>
       </div>
-      </div>
+         
+    
+         </div>
 
       <HomeBottomFooter className="mt-5"/>
     </>

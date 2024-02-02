@@ -15,7 +15,7 @@ const Search = () => {
   return (
     <>
        <Helmet>
-        <title>NexaHub |Search Products</title>
+        <title>NexaHub | Search Products</title>
       </Helmet>
       <h1 className="text-center mb-4">Search Products</h1>
       <div className="container">

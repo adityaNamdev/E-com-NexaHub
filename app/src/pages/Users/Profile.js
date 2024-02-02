@@ -67,7 +67,7 @@ const Profile = () => {
   return (
     <div className="container mt-5 mb-5">
        <Helmet>
-        <title>NexaHub |My Profile</title>
+        <title>NexaHub | My Profile</title>
       </Helmet>
       <div className="row justify-content-center align-items-center ">
         <div className="col-md-8">

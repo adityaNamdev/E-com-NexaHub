@@ -55,7 +55,7 @@ const Login = () => {
   return (
     <>
       <Helmet>
-        <title>NexaHub|Login</title>
+        <title>NexaHub | Login</title>
       </Helmet>
       <div className="container mt-3 mb-3">
       {loading && <MiniSpinner />}

@@ -3,6 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import { useAuth } from "../context/auth";
 import useCategory from "../hooks/useCategory";
 import { useCart } from "../context/cart";
+import { useWish } from "../context/wishlist";
 import toast from "react-hot-toast";
 import {
   RiHome2Line,
@@ -23,6 +24,7 @@ import SearchInput from "./SearchInput";
 const Navbar = () => {
   const [auth, setAuth] = useAuth();
   const [cart, setCart] = useCart();
+  const [wish, setWish] = useWish();
   const categories = useCategory();
 
   const handleLogout = () => {
@@ -35,13 +37,19 @@ const Navbar = () => {
 
     setCart([]);
     localStorage.removeItem("cart");
+
+    setWish([]);
+    localStorage.removeItem("wish");
+
     toast.success("Logout Successfully");
   };
   return (
     <>
       <header>
         <nav className="navbar-top-strip d-flex p-2">
-          <div className="text-white mx-2">Welcome to nexaHub</div>
+          <div className="text-white mx-2">  {!auth?.user
+              ? "Hey!!Welcome to NexaHub"
+              : `Hey!! ${auth?.token && auth?.user?.name} Welcome to NexaHub`}</div>
           <div className="mx-2 d-flex flex-wrap gap-15">
             <Link
               to="mailto:mrnamdev1372000@gmail.com"
@@ -85,7 +93,7 @@ const Navbar = () => {
               className="collapse navbar-collapse"
               id="navbarSupportedContent"
             >
-              <SearchInput/>
+               <SearchInput/>
 
               <div className="ms-auto">
                 <div className="d-flex flex-wrap gap-15">
@@ -168,12 +176,12 @@ const Navbar = () => {
                   <div>
                     <div className="dropdown">
                       <button
-                        className="btn btn-secondary dropdown-toggle bg-transparent border-0 gap-1 align-items-center me-5"
+                        className="btn btn-secondary dropdown-toggle bg-transparent border-0 gap-1 align-items-center me-5 mb-1"
                         type="button"
                         data-bs-toggle="dropdown"
                         aria-expanded="false"
                       >
-                        <span>
+                        <span >
                           <RiMenu2Line size={24} color="white" />
                         </span>
                         Shop Categories

@@ -86,7 +86,7 @@ function Footer() {
           </div>
 
           <div className="p-3 my-3 border-top text-center">
-            <p>&copy;{new Date().getFullYear()}, Cartology.com, Inc. All rights reserved.</p>
+            <p>&copy;{new Date().getFullYear()}, NexaHub.com, Inc. All rights reserved.</p>
           </div>
         </footer>
       </div>
