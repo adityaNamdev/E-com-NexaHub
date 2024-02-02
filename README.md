@@ -12,7 +12,7 @@ Nexahub is a E-commerce platform .This ecommerce store enable two main different
 
 ## Demo
 
-This application is deployed on Cyclic Please check it out : [here](https://pear-shark-fez.cyclic.app).
+This application is deployed on Render Please check it out : [here](https://nexahub.onrender.com).
 
 if you want to see ADMIN panel then login with =>
 
