@@ -6,7 +6,6 @@ const categoryRoutes =require( "./routes/categoryRoutes.js");
 const productRoutes = require ("./routes/productRoutes.js");
 const contactRoutes = require('./routes/contactRoutes.js');
 const dotenv = require('dotenv');
-const path = require("path");
 
 
 
@@ -20,7 +19,6 @@ const PORT = process.env.PORT || 4545 ;
 
 app.use(express.json());
 app.use(cors());
-app.use(express.static(path.join(__dirname, "./app/build")));
 
 
 connectToMongoDB();
@@ -31,8 +29,8 @@ app.use("/api/category", categoryRoutes);
 app.use("/api/product", productRoutes );
 app.use('/api/contact', contactRoutes);
 
-app.use('*', function(req,res){
-  res.sendFile(path.join(__dirname,"./app/build/index.html"));
+app.use('/', function(req,res){
+  res.send('Welcome to nexahub');
 })
 
 app.listen(PORT, () => {
