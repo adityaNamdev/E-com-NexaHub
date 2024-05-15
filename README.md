@@ -25,6 +25,10 @@ check payement working  with  this dummy card =>
 card number = 371449635398431
 Tip: Enter a future expiration date and a 3-digit CVV, or 4-digit CVV for American Express, to proceed.
 
+## Screenshots
+
+![Project Screenshot](project-screenshot.png)
+
 # Install Dependencies
 
 **For server** - `npm i`
